@@ -1,0 +1,66 @@
+
+
+http://www.cnblogs.com/0927wyj/p/5385565.html
+1.相关ContentProvider概念解析：
+    1.ContentProvider简介
+    2.为什么要选择ContentProvider？
+    3.Uri介绍
+    4.UriMatcher类使用介绍
+    5.ContentUris类使用介绍
+    6.使用ContentProvider共享数据
+    7.ContentResolver操作ContentProvider中的数据
+    8.监听ContentProvider中数据的变化
+2.ContentProvider的实现过程
+    1.定义一个CONTENT_URI常量，提供了访问ContentProvider的标识符。
+    2.定义一个类，继承ContentProvider。
+    3.实现query,insert,update,delete,getType和onCreate方法。
+    4.在AndroidManifest.xml当中进行声明。
+3.实例
+
+
+同样是联系人，uri的区别
+1：ContactsActivity
+    content://com.android.contacts/data/phones
+2：http://blog.csdn.net/james_lang/article/details/56398068
+    content://com.android.contacts/raw_contacts
+3.http://www.cnblogs.com/lingyun1120/archive/2012/04/18/2455212.html
+     content://contacts/people
+
+
+多媒体
+1.FileUtils
+    content://media/external/file
+2.http://blog.csdn.net/nupt123456789/article/details/24140485
+    MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+    content://media/external/images/media
+
+    http://www.cnblogs.com/zwn-lucky7/p/6517316.html
+
+短信URI： Content://sms
+
+
+
+android系统常用URI
+http://blog.csdn.net/lyx2007825/article/details/7280043
+分开的：
+  1、MediaStore.Audio.Media.EXTERNAL_CONTENT_URI：存储在外部设备上的音频文件        content://media/external/audio/media
+
+  2、MediaStore.Audio.Media.INTERNAL_CONTENT_URI：存储在手机内部上的音频文件       content://media/internal/audio/media
+
+  3、MediaStore.Images.Media.EXTERNAL_CONTENT_URI：存储在外部设备上的图片文件      content://media/external/images/media
+
+  4、MediaStore.Images.Media.INTERNAL_CONTENT_URI：存储在内部设备上的图片文件      content://media/internal/images/media
+
+  5、MediaStore.Video.Media.EXTERNAL_CONTENT_URI：存储在外部设备上的音频文件        content://media/external/video/media
+
+  6、MediaStore.Video.Media.INTERNAL_CONTENT_URI：存储在内部设备上的音频文件       content://media/internal/video/media
+
+
+总的：
+content://media/external/file
+
+MediaStore内部的类：Files，Images，Audio，Video
+1.各个类调用自己的getContentUri("external");方法就能获得对应的Uri
+2.看表里面有什么字段，进对应的类里面看
+    MediaStore.Files.FileColumns.MEDIA_TYPE
+    MediaStore.Audio.Media.DISPLAY_NAME;

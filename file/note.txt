@@ -1,0 +1,40 @@
+﻿
+另外文件夹
+http://cache.baiducontent.com/c?m=9d78d513d98601f41eba837f7d419d204e14dc3062c0d1653e92ce08c0310c564717e7ac27551210948522685be90f1efdf1456f2a4665f28cc8ff0c87be852858d97b29125cdb14528046b2b81a73817dcb0cf4af1be4bef2338eabd7d5dc5257dd53723bdab6d404&p=882a9645d7dd06fb109fca2d021488&newp=8d738f1a85cc43ff57ee947f554794231610db2151d7d3116b82c825d7331b001c3bbfb423241000d6c37e6602a54c5fe9fa307032072ba3dda5c91d9fb4c57479&user=baidu&fm=sc&query=writeexternalstorage+6%2E0&qid=c0aa3ddb00017d3f&p1=1
+
+根目录：
+rootDirectory: /system
+dataDirectory: /data
+downloadCacheDirectory: /cache
+
+
+手机存储卡根目录：
+Environment.externalStorageDirectory: /storage/emulated/0    （要权限）
+Environment.externalStoragePublicDirectory: /storage/emulated/0/Music
+
+(Context.)getDataDir(): /data/data/com.curry.io/cache    （不root看不到）（不要权限）
+(Context.)getExternalCacheDir():/storage/emulated/0/Android/data/com.curry.note/cache（不要权限）
+
+
+sd卡根目录(就是在storage下面，名字可能不叫这个)
+/storage/sdcard1
+
+不管是手机存储卡，还是sd卡，根目录都有Android/data/ 文件夹
+
+
+Android应用安装涉及到如下几个目录：
+system/app系统自带的应用程序，无法删除。
+data/app用户程序安装的目录，有删除权限。安装时把apk文件复制到此目录。
+data/data存放应用程序的数据。
+
+会不会是data/data里的是不想让用户直接看到的
+externalStorageDirectory是允许用户改的？
+
+手机存储和sd卡根目录下的storage又是怎么回事，有什么能专门放到里面的吗？
+
+-------------------------------------------------------------------------------------------------
+https://blog.csdn.net/d_o_n_g2/article/details/78027112
+https://blog.csdn.net/a910626/article/details/51470866
+
+getCacheDir()方法用于获取/data/data//cache目录
+getFilesDir()方法用于获取/data/data//files目录

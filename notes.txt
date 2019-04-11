@@ -1,0 +1,15 @@
+缓存文件夹、缓存文件处理：
+	http://blog.csdn.net/zhaokaiqiang1992/article/details/43451931
+
+文件的大小、文件夹的操作
+	http://blog.csdn.net/chenrushui/article/details/52093461
+
+
+greenDao还没有仔细看看！！！！
+
+
+其他工具类继续搜集
+
+流的操作类继续搜集
+
+contentProvider还要整理一下

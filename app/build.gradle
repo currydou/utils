@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'org.greenrobot.greendao'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath'org.greenrobot:greendao-gradle-plugin:3.1.0'
+    }
+}
+greendao {
+    schemaVersion 1
+    daoPackage 'com.curry.storage.dao'
+    targetGenDir 'src/main/java'
+}
+
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.curry.storage"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api 'com.android.support:appcompat-v7:24.0.0'
+    testImplementation 'junit:junit:4.12'
+    api 'org.greenrobot:greendao:3.1.0'
+    api 'org.greenrobot:greendao-generator:3.1.0'
+}

@@ -1,0 +1,18 @@
+
+
+util 文件夹 里面的类，是用过的，或者可以用的
+    （整理：
+    bitmaputil 没有看过，imageview里的matrix压缩旋转、takephoto里的imagezip一起看看，最后图片压缩类重新写;
+        ConvertUtils）
+     (看：fileUtil)
+util1文件夹 是别的地方看的有能用的，需要整理的进util里的
+util2文件夹 是有待检查的
+一些不能分类的先放在apputils里
+
+
+有一些类需要动态申请权限
+AndroidUtil项目里的只整理了一点点
+
+
+还有没有整理的：
+状态栏

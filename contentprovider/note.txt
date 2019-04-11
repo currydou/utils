@@ -1,0 +1,13 @@
+
+官网资料
+
+自定义contentprovider
+http://blog.csdn.net/dmk877/article/details/50387741
+
+
+使用和自定义：
+1.系统中已有的
+1.权限怎么知道
+2.uri怎么知道
+3.表的字段怎么知道
+

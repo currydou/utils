@@ -1,0 +1,20 @@
+即时通讯一般都遵循xmpp协议--查
+
+greendoor  cookie  seesion
+
+commit 事务   四个特性
+
+mysql批处理 关键字
+
+
+
+
+问题：
+1，insertOrReplace和updateUser都能替换？
+2，插入失败就不会执行，flag赋值了？
+3，所有的增删改查都要捕获异常,包括查询构建器的？
+
+
+
+
+
